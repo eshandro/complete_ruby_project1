@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_action :get_current_article, only: [:show, :edit, :update, :destroy]
 
   # GET /articles
   # GET /articles.json
@@ -63,7 +63,7 @@ class ArticlesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_article
+    def get_current_article
       @article = Article.find(params[:id])
     end
 
