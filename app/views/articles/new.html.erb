@@ -1,5 +1,14 @@
-<h1>New Article</h1>
+<div class="container">
+	<p id="notice"><%= notice %></p>
+	<h1 class="text-center">Create New Article</h1>
+	<div class="row">
+		<div class="col-8 offset-2">
+			<%= render 'form', article: @article %>
+			<%= link_to 'View All Articles', articles_path %>
+		</div>
+	</div>
 
-<%= render 'form', article: @article %>
+</div>
 
-<%= link_to 'Back', articles_path %>
+
+
