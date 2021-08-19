@@ -1,5 +1,5 @@
 class Article < ApplicationRecord
   validates :title, presence: true
 
-  belongs_to: :users
+  belongs_to :user
 end
