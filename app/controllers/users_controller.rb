@@ -1,6 +1,23 @@
 class UsersController < ApplicationController
+  # GET /signup
   def new
     @user = User.new
+  end
+
+  # GET /users/1/edit
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  # PUT /users/1
+  def update
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      flash[:notice] = "#{@user.username}! You have successfully updated your profile."
+      redirect_to articles_path
+    else
+      render 'edit'
+    end
   end
 
   def create

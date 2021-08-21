@@ -13,6 +13,6 @@
 		<%= form.password_field :password, class: "form-control", id: "signupPassword" %>
 	</div>
 	<div class="mb-3">
-		<%= form.submit "Signup", class: "btn btn-primary" %>
+		<%= form.submit(@user.new_record? ? "Signup" : "Update Profile", class: "btn btn-primary") %>
 	</div>
 <% end %>
