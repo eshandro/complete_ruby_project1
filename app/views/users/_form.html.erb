@@ -1,0 +1,18 @@
+<%= form_with(model: user, local: true) do |form| %>
+	<%= render 'shared/form_errors', obj: user %>
+	<div class="mb-3">
+		<%= form.label :username, class: "form-label", for: "signupUsername" %>
+		<%= form.text_field :username, class: "form-control", id: "signupUsername" %>
+	</div>
+	<div class="mb-3">
+		<%= form.label :email, class: "form-label", for: "signupEmail" %>
+		<%= form.email_field :email, class: "form-control", id: "signupEmail" %>
+	</div>
+	<div class="mb-3">
+		<%= form.label :password, class: "form-label", for: "signupPassword" %>
+		<%= form.password_field :password, class: "form-control", id: "signupPassword" %>
+	</div>
+	<div class="mb-3">
+		<%= form.submit "Signup", class: "btn btn-primary" %>
+	</div>
+<% end %>
