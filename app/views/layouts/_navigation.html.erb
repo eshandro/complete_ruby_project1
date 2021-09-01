@@ -7,9 +7,12 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 			<li class="nav-item dropdown">
-				<%= link_to "Articles", articles_path, class: "nav-link dropdown-toggle", id: "navbarDropdown", role:"button", data: { 'bs-toggle': "dropdown" }, aria: { expanded: "false" } %>
+				<a class="nav-link dropdown-toggle", id="navbarDropdown", role="button", data-bs-toggle="dropdown" aria-expanded="false">Articles</a>
 				<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 					<li>
+						<%= link_to 'All Articles', articles_path, class: "dropdown-item" %>
+					</li>
+          <li>
 						<%= link_to 'Create New Article', new_article_path, class: "dropdown-item" %>
 					</li>
 					<li><hr class="dropdown-divider"></li>
@@ -19,7 +22,7 @@
 				<%= link_to "Signup", signup_path, class:"nav-link" %>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+				<%= link_to 'Users', users_path, class:"nav-link" %>
 			</li>
 		</ul>
 		<form class="d-flex">
